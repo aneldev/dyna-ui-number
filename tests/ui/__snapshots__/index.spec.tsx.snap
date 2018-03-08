@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home has expected content with deep render 1`] = `
+<DynaFieldWrapper
+  className="dyna-number"
+  color="WHITE_BLACK"
+  footer={null}
+  inputElementSelector="input"
+  isLoading={null}
+  label={null}
+  mode="EDIT"
+  onClick={[Function]}
+  onFocus={[Function]}
+  onOutsideClick={[Function]}
+  required={null}
+  size="MEDIUM"
+  style="INLINE_ROUNDED"
+  validationMessage={null}
+>
+  <div
+    className="dn-number--input-content"
+  >
+    <div
+      className="dn-number--value-button"
+      onClick={[Function]}
+    >
+      <div
+        className="icon-container"
+      >
+        <i
+          aria-hidden="true"
+          className="fa fa-plus-circle"
+        />
+      </div>
+    </div>
+    <input
+      onChange={[Function]}
+      readOnly={true}
+      value="2"
+    />
+    <div
+      className="dn-number--value-button"
+      onClick={[Function]}
+    >
+      <div
+        className="icon-container"
+      >
+        <i
+          aria-hidden="true"
+          className="fa fa-minus-circle"
+        />
+      </div>
+    </div>
+  </div>
+</DynaFieldWrapper>
+`;
