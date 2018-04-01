@@ -32,16 +32,16 @@
   "license": "MIT",
   "dependencies": {
     "dyna-loops": "^1.5.1",
-    "dyna-ui-field-wrapper": "^1.7.5",
+    "dyna-ui-field-wrapper": "^1.9.2",
     "font-awesome": "^4.7.0",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0"
   },
   "devDependencies": {
     "@types/enzyme": "^3.1.8",
     "@types/enzyme-adapter-react-16": "^1.0.1",
     "@types/jest": "^19.2.2",
-    "@types/node": "^7.0.57",
+    "@types/node": "^7.0.58",
     "@types/react": "16.0.36",
     "@types/react-dom": "16.0.3",
     "autoprefixer": "^7.2.6",
@@ -76,7 +76,7 @@
     "postcss-cli": "^4.1.0",
     "postcss-loader": "^2.1.3",
     "raw-loader": "^0.5.1",
-    "react-test-renderer": "^16.0.0",
+    "react-test-renderer": "^16.3.0",
     "rimraf": "^2.6.1",
     "sass-loader": "^6.0.5",
     "source-map-loader": "0.1.5",
