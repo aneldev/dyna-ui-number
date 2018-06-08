@@ -5,6 +5,7 @@ import {faIcon} from "./utils/faIcon";
 
 import "./layout.less";
 import "./color.less";
+import {DynaFastClick} from "dyna-ui-fast-click";
 
 export {EColor, EStyle}
 
@@ -23,6 +24,7 @@ export interface IDynaNumberProps {
   precision?: number; // decimal
   validationMessage?: TContent;
   footer?: TContent;
+  touchTimeout?: number;
   inputProps?: React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>;
   onChange?: (name: string, value: number) => void;
 }
@@ -66,16 +68,16 @@ export class DynaNumber extends React.Component<IDynaNumberProps> {
   }
 
   private renderValueButton(factor: number): JSX.Element {
+    const {touchTimeout} = this.props;
     const icon: string = factor === +1 ? 'plus-circle' : 'minus-circle';
 
     return (
-      <div
+      <DynaFastClick
         className="dn-number--value-button"
+        nodeType="div"
+        touchTimeout={touchTimeout}
         onClick={this.handleButtonValueClick.bind(this, factor)}
-      >
-        <div className="icon-container">{faIcon(icon)}</div>
-      </div>
-
+      >{faIcon(icon)}</DynaFastClick>
     );
   }
 
@@ -106,14 +108,14 @@ export class DynaNumber extends React.Component<IDynaNumberProps> {
         footer={footer}
       >
         <div className="dn-number--input-content">
-          {this.renderValueButton(+1)}
+          {this.renderValueButton(-1)}
           <input
             readOnly
             value={this.getFormatedValue()}
             {...inputProps}
             onChange={e => this.handleChange(e.target.value)}
           />
-          {this.renderValueButton(-1)}
+          {this.renderValueButton(+1)}
         </div>
       </DynaFieldWrapper>
     );

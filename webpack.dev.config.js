@@ -6,9 +6,6 @@ const webpack = require('webpack');
 const loaders = require('./webpack.loaders');
 const plugins = require('./webpack.plugins');
 
-console.log('To debug open address: http://localhost:3200 on any browser');
-console.log('');
-
 const config = {
   entry: [
     'babel-polyfill',
