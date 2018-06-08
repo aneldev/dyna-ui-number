@@ -33,7 +33,7 @@
   "dependencies": {
     "dyna-loops": "^1.6.1",
     "dyna-ui-fast-click": "^1.0.1",
-    "dyna-ui-field-wrapper": "^1.9.3",
+    "dyna-ui-field-wrapper": "^1.9.4",
     "font-awesome": "^4.7.0",
     "react": "^16.4.0",
     "react-dom": "^16.4.0"
@@ -84,7 +84,7 @@
     "style-loader": "^0.18.2",
     "svg-inline-loader": "^0.8.0",
     "ts-jest": "^20.0.6",
-    "typescript": "^2.8.3",
+    "typescript": "^2.9.1",
     "url-loader": "^0.5.9",
     "webpack": "^3.12.0",
     "webpack-bundle-analyzer": "^2.13.1",
