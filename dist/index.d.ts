@@ -1,1 +1,1 @@
-export { DynaNumber, IDynaNumberProps, EColor, EStyle } from "./DynaNumber";
+export { DynaNumber, IDynaNumberProps, EColor, EStyle, } from "./DynaNumber";

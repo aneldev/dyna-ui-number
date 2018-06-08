@@ -25,9 +25,9 @@ export interface IDynaNumberProps {
 export declare type TContent = string | JSX.Element;
 export declare class DynaNumber extends React.Component<IDynaNumberProps> {
     static defaultProps: IDynaNumberProps;
-    private handleChange(value);
-    private handleButtonValueClick(factor);
-    private renderValueButton(factor);
-    private getFormatedValue();
+    private handleChange;
+    private handleButtonValueClick;
+    private renderValueButton;
+    private getFormatedValue;
     render(): JSX.Element;
 }
