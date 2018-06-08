@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("react"), require("dyna-ui-field-wrapper"), require("dyna-loops"));
+		module.exports = factory(require("react"), require("dyna-ui-field-wrapper"), require("dyna-loops"), require("dyna-ui-fast-click"));
 	else if(typeof define === 'function' && define.amd)
-		define("dyna-ui-number", ["react", "dyna-ui-field-wrapper", "dyna-loops"], factory);
+		define("dyna-ui-number", ["react", "dyna-ui-field-wrapper", "dyna-loops", "dyna-ui-fast-click"], factory);
 	else if(typeof exports === 'object')
-		exports["dyna-ui-number"] = factory(require("react"), require("dyna-ui-field-wrapper"), require("dyna-loops"));
+		exports["dyna-ui-number"] = factory(require("react"), require("dyna-ui-field-wrapper"), require("dyna-loops"), require("dyna-ui-fast-click"));
 	else
-		root["dyna-ui-number"] = factory(root["react"], root["dyna-ui-field-wrapper"], root["dyna-loops"]);
-})(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_0__, __WEBPACK_EXTERNAL_MODULE_6__, __WEBPACK_EXTERNAL_MODULE_7__) {
+		root["dyna-ui-number"] = factory(root["react"], root["dyna-ui-field-wrapper"], root["dyna-loops"], root["dyna-ui-fast-click"]);
+})(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_0__, __WEBPACK_EXTERNAL_MODULE_6__, __WEBPACK_EXTERNAL_MODULE_7__, __WEBPACK_EXTERNAL_MODULE_14__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -573,6 +573,7 @@ var dyna_loops_1 = __webpack_require__(7);
 var faIcon_1 = __webpack_require__(8);
 __webpack_require__(9);
 __webpack_require__(12);
+var dyna_ui_fast_click_1 = __webpack_require__(14);
 var DynaNumber = /** @class */ (function (_super) {
     __extends(DynaNumber, _super);
     function DynaNumber() {
@@ -599,9 +600,9 @@ var DynaNumber = /** @class */ (function (_super) {
         onChange(name, newValue);
     };
     DynaNumber.prototype.renderValueButton = function (factor) {
+        var touchTimeout = this.props.touchTimeout;
         var icon = factor === +1 ? 'plus-circle' : 'minus-circle';
-        return (React.createElement("div", { className: "dn-number--value-button", onClick: this.handleButtonValueClick.bind(this, factor) },
-            React.createElement("div", { className: "icon-container" }, faIcon_1.faIcon(icon))));
+        return (React.createElement(dyna_ui_fast_click_1.DynaFastClick, { className: "dn-number--value-button", nodeType: "div", touchTimeout: touchTimeout, onClick: this.handleButtonValueClick.bind(this, factor) }, faIcon_1.faIcon(icon)));
     };
     DynaNumber.prototype.getFormatedValue = function () {
         var _a = this.props, value = _a.value, precision = _a.precision;
@@ -612,9 +613,9 @@ var DynaNumber = /** @class */ (function (_super) {
         var _a = this.props, style = _a.style, color = _a.color, mode = _a.mode, size = _a.size, label = _a.label, required = _a.required, inputProps = _a.inputProps, validationMessage = _a.validationMessage, footer = _a.footer;
         return (React.createElement(dyna_ui_field_wrapper_1.DynaFieldWrapper, { className: "dyna-number", mode: mode, style: style, color: color, size: size, inputElementSelector: "input", label: label, required: required, validationMessage: validationMessage, footer: footer },
             React.createElement("div", { className: "dn-number--input-content" },
-                this.renderValueButton(+1),
+                this.renderValueButton(-1),
                 React.createElement("input", __assign({ readOnly: true, value: this.getFormatedValue() }, inputProps, { onChange: function (e) { return _this.handleChange(e.target.value); } })),
-                this.renderValueButton(-1))));
+                this.renderValueButton(+1))));
     };
     DynaNumber.defaultProps = {
         mode: dyna_ui_field_wrapper_1.EMode.EDIT,
@@ -704,7 +705,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, ".dyna-number .dyna-ui-field-wrapper-container {\n  padding-top: 0 !important;\n  padding-bottom: 0 !important;\n  min-width: 150px;\n}\n.dyna-number .dyna-ui-field-wrapper-container .dyna-ui-field-wrapper-control-container {\n  top: 0 !important;\n  height: 100%;\n}\n.dyna-number .dyna-ui-field-wrapper-container .dyna-ui-field-wrapper-control-container .dn-number--input-content {\n  height: 100%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n.dyna-number .dyna-ui-field-wrapper-container .dyna-ui-field-wrapper-control-container .dn-number--input-content .dn-number--value-button {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-transition: -webkit-transform 250ms ease-in-out;\n  transition: -webkit-transform 250ms ease-in-out;\n  transition: transform 250ms ease-in-out;\n  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n}\n.dyna-number .dyna-ui-field-wrapper-container .dyna-ui-field-wrapper-control-container .dn-number--input-content input {\n  border: 0;\n  text-align: center;\n  width: 120px;\n  font-weight: bold;\n}\n.dyna-number .dyna-ui-field-wrapper-container .dyna-ui-field-wrapper-control-container .dn-number--input-content input:focus {\n  outline: none;\n}\n.dyna-number.dyna-ui-field-wrapper--mode-VIEW .dn-number--value-button {\n  -webkit-transform: scale(0.01);\n          transform: scale(0.01);\n}\n.dyna-number.dyna-ui-field-wrapper--mode-EDIT .dn-number--value-button {\n  -webkit-transform: scale(1);\n          transform: scale(1);\n}\n.dyna-number.dyna-ui-field-wrapper--size-XSMALL .dn-number--value-button {\n  font-size: 24px;\n  position: relative;\n  top: 2px;\n}\n.dyna-number.dyna-ui-field-wrapper--size-SMALL .dn-number--value-button {\n  font-size: 24px;\n  position: relative;\n  top: 2px;\n}\n.dyna-number.dyna-ui-field-wrapper--size-MEDIUM .dn-number--value-button {\n  font-size: 30px;\n  position: relative;\n  top: 2px;\n}\n.dyna-number.dyna-ui-field-wrapper--size-LARGE .dn-number--value-button {\n  font-size: 46px;\n  position: relative;\n  top: 2px;\n}\n", ""]);
+exports.push([module.i, ".dyna-number .dyna-ui-field-wrapper-container {\n  padding: 0 !important;\n  min-width: 150px;\n}\n.dyna-number .dyna-ui-field-wrapper-container .dyna-ui-field-wrapper-control-container {\n  top: 0 !important;\n  height: 100%;\n}\n.dyna-number .dyna-ui-field-wrapper-container .dyna-ui-field-wrapper-control-container .dn-number--input-content {\n  height: 100%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n.dyna-number .dyna-ui-field-wrapper-container .dyna-ui-field-wrapper-control-container .dn-number--input-content .dn-number--value-button {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-transition: -webkit-transform 250ms ease-in-out;\n  transition: -webkit-transform 250ms ease-in-out;\n  transition: transform 250ms ease-in-out;\n  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  padding: 0 20px;\n}\n.dyna-number .dyna-ui-field-wrapper-container .dyna-ui-field-wrapper-control-container .dn-number--input-content input {\n  border: 0;\n  text-align: center;\n  width: 60px;\n  font-weight: bold;\n}\n.dyna-number .dyna-ui-field-wrapper-container .dyna-ui-field-wrapper-control-container .dn-number--input-content input:focus {\n  outline: none;\n}\n.dyna-number.dyna-ui-field-wrapper--mode-VIEW .dn-number--value-button {\n  -webkit-transform: scale(0.01);\n          transform: scale(0.01);\n}\n.dyna-number.dyna-ui-field-wrapper--mode-EDIT .dn-number--value-button {\n  -webkit-transform: scale(1);\n          transform: scale(1);\n}\n.dyna-number.dyna-ui-field-wrapper--size-XSMALL .dn-number--value-button {\n  font-size: 24px;\n  position: relative;\n  top: 2px;\n}\n.dyna-number.dyna-ui-field-wrapper--size-SMALL .dn-number--value-button {\n  font-size: 24px;\n  position: relative;\n  top: 2px;\n}\n.dyna-number.dyna-ui-field-wrapper--size-MEDIUM .dn-number--value-button {\n  font-size: 30px;\n  position: relative;\n  top: 2px;\n}\n.dyna-number.dyna-ui-field-wrapper--size-LARGE .dn-number--value-button {\n  font-size: 46px;\n  position: relative;\n  top: 2px;\n}\n", ""]);
 
 // exports
 
@@ -848,6 +849,12 @@ exports.push([module.i, ".dyna-number.dyna-ui-field-wrapper-color-TRANSPARENT_WH
 
 // exports
 
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_14__;
 
 /***/ })
 /******/ ]);
