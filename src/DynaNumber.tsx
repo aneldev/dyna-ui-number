@@ -1,11 +1,12 @@
 import * as React from "react";
+import {DynaFastClick} from "dyna-ui-fast-click";
 import {DynaFieldWrapper, EMode, EColor, EStyle, ESize} from "dyna-ui-field-wrapper"
 import {isNumber, round, roundToString} from "dyna-loops";
+
 import {faIcon} from "./utils/faIcon";
 
 import "./layout.less";
 import "./color.less";
-import {DynaFastClick} from "dyna-ui-fast-click";
 
 export {EColor, EStyle}
 
