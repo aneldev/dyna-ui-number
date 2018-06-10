@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("react"), require("dyna-ui-field-wrapper"), require("dyna-loops"), require("dyna-ui-fast-click"));
+		module.exports = factory(require("react"), require("dyna-ui-fast-click"), require("dyna-ui-field-wrapper"), require("dyna-loops"));
 	else if(typeof define === 'function' && define.amd)
-		define("dyna-ui-number", ["react", "dyna-ui-field-wrapper", "dyna-loops", "dyna-ui-fast-click"], factory);
+		define("dyna-ui-number", ["react", "dyna-ui-fast-click", "dyna-ui-field-wrapper", "dyna-loops"], factory);
 	else if(typeof exports === 'object')
-		exports["dyna-ui-number"] = factory(require("react"), require("dyna-ui-field-wrapper"), require("dyna-loops"), require("dyna-ui-fast-click"));
+		exports["dyna-ui-number"] = factory(require("react"), require("dyna-ui-fast-click"), require("dyna-ui-field-wrapper"), require("dyna-loops"));
 	else
-		root["dyna-ui-number"] = factory(root["react"], root["dyna-ui-field-wrapper"], root["dyna-loops"], root["dyna-ui-fast-click"]);
-})(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_0__, __WEBPACK_EXTERNAL_MODULE_6__, __WEBPACK_EXTERNAL_MODULE_7__, __WEBPACK_EXTERNAL_MODULE_14__) {
+		root["dyna-ui-number"] = factory(root["react"], root["dyna-ui-fast-click"], root["dyna-ui-field-wrapper"], root["dyna-loops"]);
+})(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_0__, __WEBPACK_EXTERNAL_MODULE_6__, __WEBPACK_EXTERNAL_MODULE_7__, __WEBPACK_EXTERNAL_MODULE_8__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -208,7 +208,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(11);
+var	fixUrls = __webpack_require__(12);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -566,14 +566,14 @@ var __assign = (this && this.__assign) || Object.assign || function(t) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
-var dyna_ui_field_wrapper_1 = __webpack_require__(6);
+var dyna_ui_fast_click_1 = __webpack_require__(6);
+var dyna_ui_field_wrapper_1 = __webpack_require__(7);
 exports.EColor = dyna_ui_field_wrapper_1.EColor;
 exports.EStyle = dyna_ui_field_wrapper_1.EStyle;
-var dyna_loops_1 = __webpack_require__(7);
-var faIcon_1 = __webpack_require__(8);
-__webpack_require__(9);
-__webpack_require__(12);
-var dyna_ui_fast_click_1 = __webpack_require__(14);
+var dyna_loops_1 = __webpack_require__(8);
+var faIcon_1 = __webpack_require__(9);
+__webpack_require__(10);
+__webpack_require__(13);
 var DynaNumber = /** @class */ (function (_super) {
     __extends(DynaNumber, _super);
     function DynaNumber() {
@@ -653,6 +653,12 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_7__;
 
 /***/ }),
 /* 8 */
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_8__;
+
+/***/ }),
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -666,13 +672,13 @@ exports.faIcon = function (awesomeFontIconName, className) {
 
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(10);
+var content = __webpack_require__(11);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -697,7 +703,7 @@ if(false) {
 }
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -711,7 +717,7 @@ exports.push([module.i, ".dyna-number .dyna-ui-field-wrapper-container {\n  padd
 
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -806,13 +812,13 @@ module.exports = function (css) {
 };
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(13);
+var content = __webpack_require__(14);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -837,7 +843,7 @@ if(false) {
 }
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -849,12 +855,6 @@ exports.push([module.i, ".dyna-number.dyna-ui-field-wrapper-color-TRANSPARENT_WH
 
 // exports
 
-
-/***/ }),
-/* 14 */
-/***/ (function(module, exports) {
-
-module.exports = __WEBPACK_EXTERNAL_MODULE_14__;
 
 /***/ })
 /******/ ]);
