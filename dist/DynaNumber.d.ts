@@ -18,7 +18,6 @@ export interface IDynaNumberProps {
     precision?: number;
     validationMessage?: TContent;
     footer?: TContent;
-    touchTimeout?: number;
     inputProps?: React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>;
     onChange?: (name: string, value: number) => void;
 }
