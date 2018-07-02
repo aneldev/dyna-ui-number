@@ -32,8 +32,8 @@
   "license": "MIT",
   "dependencies": {
     "dyna-loops": "^1.6.1",
-    "dyna-ui-fast-click": "^1.0.3",
-    "dyna-ui-field-wrapper": "^1.9.6",
+    "dyna-ui-fast-click": "^1.0.4",
+    "dyna-ui-field-wrapper": "^1.9.7",
     "font-awesome": "^4.7.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1"
